@@ -1,0 +1,24 @@
+# Python 3.10+ (tested on 3.11)
+
+# TimesFM package. Version 3.0.2 still ships the Apache-2.0 TimesFM 2.5 code
+# (`timesfm.TimesFM_2p5_200M_torch`); this app only loads the 2.5 weights
+# (google/timesfm-2.5-200m-pytorch), never the non-commercial 3.0 weights.
+timesfm[torch]==3.0.2
+
+# torch 2.2.2 is the newest PyTorch with wheels for Intel (x86_64) Macs.
+# It is built against NumPy 1.x, so NumPy must stay below 2.
+torch==2.2.2
+numpy==1.26.4
+# pyarrow (used by Streamlit tables) 25+ requires NumPy 2; 24.0.0 works with NumPy 1.26.
+pyarrow==24.0.0
+
+huggingface-hub==2.4.0
+safetensors==0.8.0
+pandas==3.0.6
+yfinance==1.8.0
+streamlit==1.67.0
+plotly==7.1.0
+
+# Document upload page: pypdf reads uploaded PDFs; fpdf2 builds the example PDF.
+pypdf==7.0.0
+fpdf2==2.9.0
